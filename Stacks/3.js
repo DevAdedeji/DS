@@ -1,4 +1,3 @@
-// Creating our stack class
 class Stack {
     constructor() {
         this._count = 0
@@ -56,31 +55,48 @@ class Stack {
         return objString
     }
 }
+// Converting decimal numbers to binary using stack
+function decimalToBinary(decNumber) {
+    let newStack = new Stack();
+    let number = decNumber;
+    let rem;
+    let binaryString;
+
+    while (number > 0) {
+        rem = Math.floor(number % 2)
+        newStack.push(rem)
+        number = Math.floor(number / 2)
+    }
+    while (!newStack.isEmpty()) {
+        binaryString += newStack.pop().toString()
+    }
+    return binaryString
+}
 
 
+function baseConverter(decNumber, base) {
+    const newStack = new Stack()
+    const digits = "0123456789ABCDEFGHIJKLMNOPQRTSTUVWXYZ"
+    let number = decNumber
+    let rem
+    let baseString
 
+    if (base < 0 || base > 36) {
+        return ''
+    }
 
-const stack = new Stack()
+    while (number > 0) {
+        rem = Math.floor(number % base)
+        newStack.push(rem)
+        number = Math.floor(number / 2)
+    }
 
+    while (!newStack.isEmpty()) {
+        baseString += digits[newStack.pop()]
+    }
 
-// checking if the data structure is empty
-// console.log(stack.isEmpty());
+    return baseString
 
-// pushing element into the list
-stack.push(5)
-stack.push(10)
-stack.push(150)
+}
 
-// Peeking
-// console.log(stack.peek());
-
-
-// removing elements
-// stack.pop()
-// stack.pop()
-
-// Size
-console.log(stack.size());
-
-// toString method
-// console.log(stack.toString());
+console.log(baseConverter(233443, 16));
