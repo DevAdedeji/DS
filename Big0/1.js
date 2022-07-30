@@ -1,15 +1,24 @@
-const nemo = ['nemo'];
-const everyone = ['Adedeji', 'Demilade', 'Wale', 'Tunde', 'nemo', 'Ijaya']
-function findNemo(array){
-    let t0 = performance.now();
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === 'nemo'){
-            console.log("Nemo Found");
-        }
-    }
-    let t1 = performance.now();
+// const nemo = ['nemo'];
+// const everyone = ['Adedeji', 'Demilade', 'Wale', 'Tunde', 'nemo', 'Ijaya'];
+// const large = new Array(10000).fill('nemo')
 
-    console.log('Call to find nemo took', (t1-t0), 'milliseconds');
+// function findNemo(array){
+    
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === 'nemo'){
+//             console.log("Nemo Found");
+//         }
+//     }
+    
+// }
+
+// findNemo(large); // O(n)
+
+const boxes = [0,1,2,3,4,5]
+
+function logFirstTwoBoxes(boxes){
+    console.log(boxes[0]); // O(1)
+    console.log(boxes[1]); // O(1)
 }
 
-findNemo(everyone);
+logFirstTwoBoxes(boxes); // O(2)
