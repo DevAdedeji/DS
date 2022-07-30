@@ -13,4 +13,4 @@ function funChallenge(input) {
 
 funChallenge();
 
-// BIG O(3 + 4n) - BIG O(n)
+// BIG O(3 + 4n) - //Remove constants BIG O(n)

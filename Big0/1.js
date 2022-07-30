@@ -7,6 +7,7 @@ function findNemo(array){
     for(let i = 0; i < array.length; i++){
         if(array[i] === 'nemo'){
             console.log("Nemo Found");
+            // Big O Rule 1
             break;
         }
     }
