@@ -14,7 +14,7 @@ Its a standard mathematical notation that is used to measure how efficient an al
 This is referred to as the amount of computational resources used by the algorithm
 
 ## Time Complexity
-Time complexity is the time an algorithms takes to run...
+Time complexity is how much time an algorithms takes to run...
 
 
 ## Space Complexity
